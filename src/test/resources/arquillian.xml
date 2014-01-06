@@ -9,7 +9,7 @@
 
 	<container qualifier="websphere" default="true">
 		<configuration>
-			<property name="wlpHome">/Users/robertpanzer/wlp</property>
+			<property name="wlpHome">${env.WLP_HOME}</property>
 			<property name="serverName">defaultServer</property>
 			<property name="httpPort">9080</property>
 		</configuration>
