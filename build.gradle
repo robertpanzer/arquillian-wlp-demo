@@ -1,0 +1,17 @@
+apply plugin: 'java'
+
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'org.jboss.spec.javax.servlet:jboss-servlet-api_3.0_spec:1.0.2.Final'
+    testCompile 'junit:junit:4.11'
+    testCompile 'org.jboss.arquillian.junit:arquillian-junit-container:1.1.2.Final'
+    
+    testRuntime 'org.jboss.arquillian.container:arquillian-wlp-managed-8.5:1.0.0.Final-SNAPSHOT'
+    testRuntime files("${System.properties['java.home']}/../lib/tools.jar")
+
+}
